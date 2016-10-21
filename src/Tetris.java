@@ -33,6 +33,6 @@ public class Tetris extends JFrame {
         Tetris game = new Tetris();
         game.setLocationRelativeTo(null);
         game.setVisible(true);
-
+        Audio.PlayAudio();
     }
 }
