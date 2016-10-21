@@ -250,10 +250,6 @@ public class Board extends JPanel implements ActionListener {
     class TAdapter extends KeyAdapter {
         public void keyPressed(KeyEvent e) {
 
-            if (!isStarted || curPiece.getShape() == Tetrominoes.NoShape) {
-                return;
-            }
-
             int keycode = e.getKeyCode();
 
             if (keycode == 'p' || keycode == 'P') {
@@ -287,7 +283,21 @@ public class Board extends JPanel implements ActionListener {
                     //oneLineDown();
                     //break;
             }
+            if((keycode == 'r' || keycode == 'R')){
+                clearBoard();
+                isStarted = true;
+                setVisible(false);
+                repaint();
+                tetris.Tetris game = new tetris.Tetris();
+                game.setLocationRelativeTo(null);
+                game.setVisible(true);
+            }
+
+            if (curPiece.getShape() == Tetrominoes.NoShape) {
+                return;
+            }
 
         }
     }
+
 }
