@@ -76,20 +76,20 @@ public class Shape {
         return m;
     }
 
-    public Shape rotateLeft()
-    {
-        if (pieceShape == Tetrominoes.SquareShape)
-            return this;
+    //*public Shape rotateLeft()
+    //{
+        //if (pieceShape == Tetrominoes.SquareShape)
+            //return this;
 
-        Shape result = new Shape();
-        result.pieceShape = pieceShape;
+        //Shape result = new Shape();
+        //result.pieceShape = pieceShape;
 
-        for (int i = 0; i < 4; ++i) {
-            result.setX(i, y(i));
-            result.setY(i, -x(i));
-        }
-        return result;
-    }
+        //for (int i = 0; i < 4; ++i) {
+            //result.setX(i, y(i));
+            //result.setY(i, -x(i));
+        //}
+        //return result;
+    //}
 
     public Shape rotateRight()
     {
